@@ -1,0 +1,20 @@
+# Visual Studio
+.vs/
+*.suo
+*.user
+*.dtbcache.json
+/WebSite
+
+# 构建输出
+**/bin/
+**/obj/
+
+# 备份
+Backup/
+
+#txt
+*.txt
+
+# VS 索引缓存
+*.vsidx
+*.db

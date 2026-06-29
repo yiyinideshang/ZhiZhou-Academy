@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<TreeRoot url="" title="管理功能">
+  <TreeNode url="" title="用户管理">
+    <TreeLeaf url="UsersList.aspx" title="用户列表"/>
+    <TreeLeaf url="AddUsers.aspx" title="新增用户"/>
+  </TreeNode>
+  <TreeNode url="" title="课程管理">
+    <TreeLeaf url="CourseList.aspx" title="课程列表"/>
+    <TreeLeaf url="NewCourse.aspx" title="添加课程"/>
+    <TreeLeaf url="CateList.aspx" title="课程分类"/>
+  </TreeNode>
+  <TreeNode url="" title="订单管理">
+    <TreeLeaf url="OrdersList.aspx" title="订单列表"/>
+    <TreeLeaf url="OrderCourseList.aspx" title="订单课程明细"/>
+  </TreeNode>
+  <TreeNode url="" title="界面管理">
+    <TreeLeaf url="/Default.aspx" title="回到首页"/>
+    <TreeLeaf url="/Home.aspx" title="关于我们"/>
+    <TreeLeaf url="/StudyPath.aspx" title="学习路径"/>
+    <TreeLeaf url="/Teacher.aspx" title="名师大咖"/>
+	<TreeLeaf url="AdminDefault.aspx" title="回到管理首页"/>
+  </TreeNode>
+</TreeRoot>

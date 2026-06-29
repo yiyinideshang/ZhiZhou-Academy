@@ -1,0 +1,191 @@
+	<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site2.Master.cs" Inherits="Maticsoft.Web.Site" %>
+	<!DOCTYPE html>
+	<html lang="zh-CN">
+	<head runat="server">
+	    <meta charset="utf-8" />
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	    <link rel="icon" href="images/favicon.png" type="image/png" sizes="32x32" />
+	    <title>知舟课堂 - 让学习更有价值</title>
+	    <style>
+	        * { margin: 0; padding: 0; box-sizing: border-box; font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; }
+	        body { background: #f7f8fa; color: #333; }
+	        a { text-decoration: none; }
+	        .course-link { display: block; color: inherit; }
+	        .course-link:hover .course { transform: translateY(-6px); box-shadow: 0 12px 32px rgba(0, 0, 0, .09); }
+	        .content { flex: 1; }
+	        .header { width: 100%; height: 70px; background: #fff; box-shadow: 0 2px 12px rgba(0, 0, 0, .05); position: sticky; top: 0; z-index: 99; }
+	        .nav { max-width: 1200px; height: 70px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 0 20px; }
+	        .logo { display: flex; align-items: center; gap: 10px; font-size: 24px; font-weight: 700; color: #1677ff; }
+	        .logo img { height: 64px; width: auto; }
+	        .menu a { margin-left: 26px; font-size: 15px; color: #444; cursor: pointer; }
+	        .menu a:hover { color: #1677ff; }
+	        .search { display: flex; align-items: center; border: 1px solid #e5e6eb; border-radius: 8px; overflow: hidden; }
+	        .search input { border: none; outline: none; padding: 8px 12px; width: 180px; font-size: 14px; }
+	        .search button { background: #1677ff; color: #fff; border: none; padding: 8px 14px; cursor: pointer; }
+	        .auth-area { display: flex; align-items: center; gap: 15px; }
+	        .auth-links a { margin-left: 15px; font-size: 14px; color: #666; }
+	        .auth-links a:hover { color: #1677ff; }
+	        .user-info { display: flex; align-items: center; gap: 10px; padding: 6px 12px; border-radius: 25px; background: #f5f7fa; cursor: pointer; transition: all 0.3s; }
+	        .user-info:hover { background: #e6f7ff; }
+	        .user-avatar { width: 36px; height: 36px; border-radius: 50%; object-fit: cover; border: 2px solid #fff; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+	        .user-name { font-size: 14px; font-weight: 500; color: #333; max-width: 100px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+	        .user-dropdown { position: relative; }
+	        .dropdown-menu { position: absolute; top: 100%; right: 0; margin-top: 8px; background: #fff; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.12); padding: 8px 0; min-width: 140px; display: none; z-index: 100; }
+	        .dropdown-menu.show { display: block; animation: fadeIn 0.2s ease; }
+	        @keyframes fadeIn { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
+	        .dropdown-menu a { display: block; padding: 10px 16px; color: #333; font-size: 14px; margin: 0; }
+	        .dropdown-menu a:hover { background: #f5f7fa; color: #1677ff; }
+	        .dropdown-menu .divider { height: 1px; background: #f0f0f0; margin: 5px 0; }
+	        .logout-btn { color: #ff4d4f !important; }
+	        .admin-badge { background: linear-gradient(135deg, #ff6b6b, #ff8e53); color: #fff; font-size: 10px; padding: 2px 6px; border-radius: 4px; font-weight: 500; }
+        .vip-badge { background: linear-gradient(135deg, #ffd700, #ffb347); color: #fff; font-size: 10px; padding: 2px 6px; border-radius: 4px; font-weight: 500; }
+        .normal-badge { background: linear-gradient(135deg, #95a5a6, #bdc3c7); color: #fff; font-size: 10px; padding: 2px 6px; border-radius: 4px; font-weight: 500; }
+	        .course-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(270px, 1fr)); gap: 24px; }
+	        .course { background: #fff; border-radius: 14px; overflow: hidden; box-shadow: 0 4px 18px rgba(0, 0, 0, .05); transition: .3s; }
+	        .course:hover { transform: translateY(-6px); box-shadow: 0 12px 32px rgba(0, 0, 0, .09); }
+	        .course-img { width: 100%; height: 160px; object-fit: cover; }
+	        .course-body { padding: 18px; }
+	        .tag { display: inline-block; padding: 4px 8px; background: #e6f7ff; color: #1677ff; border-radius: 6px; font-size: 12px; }
+        .tag-recommend { background: #f0f9eb; color: #67c23a; margin-left: 6px; }
+        .filter-btn { padding: 6px 16px; border: 1px solid #d9d9d9; background: #fff; border-radius: 20px; font-size: 14px; cursor: pointer; margin-left: 8px; transition: all .3s; }
+        .filter-btn:hover { border-color: #1677ff; color: #1677ff; }
+        .filter-btn.active { background: #1677ff; border-color: #1677ff; color: #fff; }
+        .title { font-size: 16px; margin: 10px 0; height: 48px; overflow: hidden; }
+	        .info { display: flex; justify-content: space-between; font-size: 14px; color: #888; }
+	        .price { font-size: 18px; font-weight: 600; color: #ff4d4f; }
+	        .no-auth-modal { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); display: none; justify-content: center; align-items: center; z-index: 9999; }
+	        .no-auth-modal.show { display: flex; }
+	        .modal-content { background: #fff; padding: 30px 40px; border-radius: 12px; text-align: center; max-width: 360px; }
+	        .modal-content h3 { color: #ff4d4f; margin-bottom: 15px; }
+	        .modal-content p { color: #666; margin-bottom: 20px; }
+	        .modal-content button { background: #1677ff; color: #fff; border: none; padding: 10px 30px; border-radius: 6px; cursor: pointer; font-size: 14px; }
+	        .highlight { background: #fff3cd; color: #856404; padding: 1px 3px; border-radius: 3px; }
+	        .course-detail-panel { max-width: 1000px; margin: 0 auto; background: #fff; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); overflow: hidden; }
+	        .detail-back-btn { display: inline-block; margin: 16px 20px; padding: 8px 16px; background: #1677ff; color: #fff; border: none; border-radius: 6px; cursor: pointer; font-size: 14px; }
+	        .detail-back-btn:hover { background: #0958d9; }
+	        .detail-img { width: 100%; height: 400px; object-fit: cover; }
+	        .detail-content { padding: 30px; }
+	        .detail-title { font-size: 28px; color: #333; margin-bottom: 15px; }
+	        .detail-info-line { font-size: 16px; color: #666; margin: 8px 0; }
+	        .detail-price { font-size: 22px; color: #ff4d4f; font-weight: 600; margin: 15px 0; }
+	        .detail-desc-title { font-size: 18px; color: #333; margin: 20px 0 10px; padding-bottom: 8px; border-bottom: 1px solid #eee; }
+	        .detail-desc-content { line-height: 1.8; color: #555; }
+	        .site-footer {
+	            background: #1f2937;
+	            color: #9ca3af;
+	            padding: 40px 20px;
+	            text-align: center;
+	            margin-top: 50px;
+	            font-size: 14px;
+	            line-height: 1.8;
+	        }
+	        .site-footer p {
+	            margin-bottom: 8px;
+	        }
+	        .site-footer .footer-links {
+	            margin-top: 15px;
+	            display: flex;
+	            justify-content: center;
+	            gap: 20px;
+	        }
+	        .site-footer .footer-links a {
+	            color: #d1d5db;
+	            text-decoration: none;
+	            transition: color 0.3s;
+	        }
+	        .site-footer .footer-links a:hover {
+	            color: #1677ff;
+	        }
+	        @media (max-width: 900px) {
+	            .site-footer { padding: 30px 15px; }
+	            .site-footer .footer-links { flex-direction: column; gap: 10px; }
+	        }
+	    </style>
+	</head>
+	<body>
+	    <form id="form1" runat="server">
+	        <asp:HiddenField ID="hfCategoryId" runat="server" Value="0" />
+	        <div class="header">
+	            <div class="nav">
+	                <div class="logo"><img src="images/Logo.png" alt="Logo" />知舟课堂</div>
+	                <div class="menu">
+	                    <a href="Default.aspx">首页</a>
+	                    <a href="Home.aspx">关于我们</a>
+	                    <a href="StudyPath.aspx">学习路径</a>
+	                    <a href="Teacher.aspx">名师大咖</a>
+	                    <asp:HyperLink ID="hlAdmin" runat="server" NavigateUrl="~/Admin/AdminDefault.aspx">课程管理系统</asp:HyperLink>
+	                </div>
+	                <div class="auth-area">
+	                    <div class="search">
+	                        <input type="text" id="searchInput" placeholder="搜索课程、关键词" oninput="searchCourses()" />
+	                        <button type="button" onclick="searchCourses()">搜索</button>
+	                    </div>
+	                    <asp:Panel ID="pnlNotLogin" runat="server" CssClass="auth-links">
+	                        <a href="Login.aspx">登录</a>
+	                        <a href="Register.aspx">注册</a>
+	                    </asp:Panel>
+	                    <asp:Panel ID="pnlLoggedIn" runat="server" CssClass="user-dropdown" Visible="false">
+	                        <div class="user-info" onclick="toggleDropdown()">
+	                            <asp:Image ID="imgAvatar" runat="server" CssClass="user-avatar" />
+	                            <asp:Label ID="lblUserName" runat="server" CssClass="user-name"></asp:Label>
+	                            <asp:Label ID="lblAdminBadge" runat="server" CssClass="admin-badge" Visible="false">管理员</asp:Label>
+	                            <asp:Label ID="lblVipBadge" runat="server" CssClass="vip-badge" Visible="false">VIP用户</asp:Label>
+	                            <asp:Label ID="lblNormalBadge" runat="server" CssClass="normal-badge" Visible="false">普通用户</asp:Label>
+	                        </div>
+	                        <div id="dropdownMenu" class="dropdown-menu">
+	                            <a href="UserCenter.aspx">个人中心</a>
+	                            <div class="divider"></div>
+	                            <asp:LinkButton ID="lbtnLogout" runat="server" CssClass="logout-btn" OnClick="lbtnLogout_Click">退出登录</asp:LinkButton>
+	                        </div>
+	                    </asp:Panel>
+	                </div>
+	            </div>
+	        </div>
+	        <div class="content">
+	            <asp:ContentPlaceHolder ID="cphMainContent" runat="server">
+	            </asp:ContentPlaceHolder>
+	        </div>
+	        <div id="noAuthModal" class="no-auth-modal">
+	            <div class="modal-content">
+	                <h3>⚠️ 权限不足</h3>
+	                <p>您不是管理员，无法访问课程管理系统！</p>
+	                <button onclick="closeModal()">我知道了</button>
+	            </div>
+	        </div>
+	        <footer class="site-footer">
+	            <p>© 2026 知舟课堂 版权所有 | 专业IT职业教育平台 | 专注Java、Python、AI、大数据、前端开发等实战课程</p>
+	            <p>咨询热线：15231866708| 官方邮箱：2779271357@qq.com | 地址：河北省石家庄市桥西区红旗大街469号</p>
+	            <p>平台备案号：京ICP备XXXXXXXX号-1 | 免责声明：本课程内容仅供学习交流，禁止商业用途</p>
+	            <div class="footer-links">
+	                <a href="#">隐私政策</a>
+	                <a href="#">用户协议</a>
+	                <a href="#">常见问题</a>
+	            </div>
+	        </footer>
+	    </form>
+	    <script type="text/javascript">
+	        function toggleDropdown() {
+	            var menu = document.getElementById('dropdownMenu');
+	            menu.classList.toggle('show');
+	        }
+	        document.addEventListener('click', function (e) {
+	            var dropdown = document.querySelector('.user-dropdown');
+	            var menu = document.getElementById('dropdownMenu');
+	            if (dropdown && menu && !dropdown.contains(e.target)) {
+	                menu.classList.remove('show');
+	            }
+	        });
+	        function closeModal() {
+	            document.getElementById('noAuthModal').classList.remove('show');
+	        }
+	        function checkAdminAccess(event, isAdmin) {
+	            if (!isAdmin) {
+	                event.preventDefault();
+	                document.getElementById('noAuthModal').classList.add('show');
+	                return false;
+	            }
+	            return true;
+	        }
+	    </script>
+	</body>
+	</html>

@@ -1,0 +1,12 @@
+﻿.hiddenId {
+    display: none;
+}
+
+.long-text {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5; /* 限制显示行数 */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 300px;
+}

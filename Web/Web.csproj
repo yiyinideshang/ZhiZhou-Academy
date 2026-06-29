@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5B535162-10C2-4238-BC56-193B968E1834}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Maticsoft.Web</RootNamespace>
+    <AssemblyName>Maticsoft.Web</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <Use64BitIISExpress />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Maticsoft.Common, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\Maticsoft.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Web.UI.WebControls">
+      <HintPath>..\Lib\Microsoft.Web.UI.WebControls.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Web.UI.WebControls">
+      <HintPath>..\Lib\LTP.Accounts.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin\AddUsers.aspx" />
+    <Content Include="Admin\AdminDefault.aspx" />
+    <Content Include="Admin\CateList.aspx" />
+    <Content Include="Admin\Courseimg\1.png" />
+    <Content Include="Admin\Courseimg\10.png" />
+    <Content Include="Admin\Courseimg\11.png" />
+    <Content Include="Admin\Courseimg\12.png" />
+    <Content Include="Admin\Courseimg\13.png" />
+    <Content Include="Admin\Courseimg\14.png" />
+    <Content Include="Admin\Courseimg\15.png" />
+    <Content Include="Admin\Courseimg\16.png" />
+    <Content Include="Admin\Courseimg\17.png" />
+    <Content Include="Admin\Courseimg\18.png" />
+    <Content Include="Admin\Courseimg\19.png" />
+    <Content Include="Admin\Courseimg\2.png" />
+    <Content Include="Admin\Courseimg\20.png" />
+    <Content Include="Admin\Courseimg\21.jpg" />
+    <Content Include="Admin\Courseimg\22.png" />
+    <Content Include="Admin\Courseimg\23.png" />
+    <Content Include="Admin\Courseimg\25.jpg" />
+    <Content Include="Admin\Courseimg\26.png" />
+    <Content Include="Admin\Courseimg\28.jpg" />
+    <Content Include="Admin\Courseimg\3.png" />
+    <Content Include="Admin\Courseimg\30.png" />
+    <Content Include="Admin\Courseimg\31.png" />
+    <Content Include="Admin\Courseimg\32.png" />
+    <Content Include="Admin\Courseimg\33.jpg" />
+    <Content Include="Admin\Courseimg\34.png" />
+    <Content Include="Admin\Courseimg\4.png" />
+    <Content Include="Admin\Courseimg\6.png" />
+    <Content Include="Admin\Courseimg\8.png" />
+    <Content Include="Admin\Courseimg\9.png" />
+    <Content Include="Admin\CourseList.aspx" />
+    <Content Include="Admin\Course_All_Mess.aspx" />
+    <Content Include="Admin\images\123.jpg" />
+    <Content Include="Admin\images\nono.png" />
+    <Content Include="Admin\NewCourse.aspx" />
+    <Content Include="Admin\OrderCourseList.aspx" />
+    <Content Include="Admin\OrdersList.aspx" />
+    <Content Include="Admin\teacher\Andy.png" />
+    <Content Include="Admin\teacher\Mic.png" />
+    <Content Include="Admin\teacher\Roonie.png" />
+    <Content Include="Admin\teacher\云霄.png" />
+    <Content Include="Admin\teacher\侯捷.png" />
+    <Content Include="Admin\teacher\唐宇迪.png" />
+    <Content Include="Admin\teacher\灰灰.png" />
+    <Content Include="Admin\teacher\纵横.png" />
+    <Content Include="Admin\teacher\轩辕.png" />
+    <Content Include="Admin\UsersList.aspx" />
+    <Content Include="bin\Maticsoft.Web.dll" />
+    <Content Include="bin\Maticsoft.Web.pdb" />
+    <Content Include="Default.aspx" />
+    <Content Include="Home.aspx" />
+    <Content Include="images\photo\1.jpeg" />
+    <Content Include="images\photo\100.jpg" />
+    <Content Include="images\photo\2.jpg" />
+    <Content Include="images\photo\3.jpg" />
+    <Content Include="images\photo\501f04dd-b7e3-4956-9f89-d262dae653ff.jpg" />
+    <Content Include="images\photo\7.jpg" />
+    <Content Include="images\photo\8.jpg" />
+    <Content Include="images\photo\default.png" />
+    <Content Include="images\photo\tubiao2.jpg" />
+    <Content Include="images\photo\user_30_df886a29.jpg" />
+    <Content Include="images\photo\xiaomao.jpg" />
+    <Content Include="images\photo\zhu.jpg" />
+    <Content Include="images\photo\张明.jpg" />
+    <Content Include="images\photo\李华.jpg" />
+    <Content Include="images\photo\王芳.jpg" />
+    <Content Include="lib\APlayer.min.css" />
+    <Content Include="lib\APlayer.min.js" />
+    <Content Include="music\cover\Everything Goes On.jpg" />
+    <Content Include="music\cover\周传雄-男人海洋.jpg" />
+    <Content Include="music\cover\王大毛-去年夏天.jpg" />
+    <Content Include="music\cover\艾比利-一个人想着一个人.jpg" />
+    <Content Include="music\lyrics\周传雄-男人海洋.lrc" />
+    <Content Include="music\lyrics\艾比利 - 一个人想着一个人.lrc" />
+    <Content Include="music\Porter Robinson - Everything Goes On.mp3" />
+    <Content Include="music\周传雄-男人海洋.mp3" />
+    <Content Include="music\王大毛-去年夏天.mp3" />
+    <Content Include="music\艾比利 - 一个人想着一个人 %28说唱版%29.mp3" />
+    <Content Include="obj\Debug\Maticsoft.Web.dll" />
+    <Content Include="obj\Debug\Maticsoft.Web.pdb" />
+    <Content Include="obj\Debug\Web.csproj.FileListAbsolute.txt" />
+    <Content Include="UserCenter.aspx" />
+    <Content Include="images\bg3.jpg" />
+    <Content Include="images\bg4.jpg" />
+    <Content Include="images\bg2.jpg" />
+    <Content Include="images\bg1.jpg" />
+    <Content Include="images\footer\jin.jpg" />
+    <Content Include="images\footer\wang.jpg" />
+    <Content Include="images\footer\zhang.jpg" />
+    <Content Include="images\login1.jpg" />
+    <Content Include="Login.aspx" />
+    <Content Include="Register.aspx" />
+    <Content Include="StyleSheet.css" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="XMLFile1.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Teacher.aspx" />
+    <Content Include="StudyPath.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin\AddUsers.aspx.cs">
+      <DependentUpon>AddUsers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AddUsers.aspx.designer.cs">
+      <DependentUpon>AddUsers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminDefault.aspx.cs">
+      <DependentUpon>AdminDefault.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminDefault.aspx.designer.cs">
+      <DependentUpon>AdminDefault.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\CateList.aspx.cs">
+      <DependentUpon>CateList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\CateList.aspx.designer.cs">
+      <DependentUpon>CateList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\CourseList.aspx.cs">
+      <DependentUpon>CourseList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\CourseList.aspx.designer.cs">
+      <DependentUpon>CourseList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Course_All_Mess.aspx.cs">
+      <DependentUpon>Course_All_Mess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Course_All_Mess.aspx.designer.cs">
+      <DependentUpon>Course_All_Mess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\NewCourse.aspx.cs">
+      <DependentUpon>NewCourse.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\NewCourse.aspx.designer.cs">
+      <DependentUpon>NewCourse.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\OrderCourseList.aspx.cs">
+      <DependentUpon>OrderCourseList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\OrderCourseList.aspx.designer.cs">
+      <DependentUpon>OrderCourseList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\OrdersList.aspx.cs">
+      <DependentUpon>OrdersList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\OrdersList.aspx.designer.cs">
+      <DependentUpon>OrdersList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Site1.Master.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Site1.Master.designer.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+    </Compile>
+    <Content Include="Admin\Site1.Master" />
+    <Compile Include="Admin\UsersList.aspx.cs">
+      <DependentUpon>UsersList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\UsersList.aspx.designer.cs">
+      <DependentUpon>UsersList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site2.Master.cs">
+      <DependentUpon>Site2.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site2.Master.designer.cs">
+      <DependentUpon>Site2.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Teacher.aspx.cs">
+      <DependentUpon>Teacher.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Teacher.aspx.designer.cs">
+      <DependentUpon>Teacher.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StudyPath.aspx.cs">
+      <DependentUpon>StudyPath.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StudyPath.aspx.designer.cs">
+      <DependentUpon>StudyPath.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserCenter.aspx.cs">
+      <DependentUpon>UserCenter.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{38D7AA58-C95B-449B-86C6-A8073A56E11F}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{53995DBB-9836-4647-AD22-865884FDEB9E}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Site2.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <Content Include="obj\Debug\Web.csproj.AssemblyReference.cache" />
+    <Content Include="obj\Debug\Web.csproj.CoreCompileInputs.cache" />
+    <Content Include="obj\Debug\Web.csproj.Up2Date" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="obj\Debug\TempPE\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="music\lyrics\Porter Robinson - Everything Goes On.lrc" />
+    <Content Include="music\lyrics\王大毛-去年夏天.lrc" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>3448</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:34498/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
