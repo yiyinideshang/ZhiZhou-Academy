@@ -10,26 +10,26 @@
 
 基于 **ASP.NET Web Forms** 开发的在线课程管理系统，采用三层架构（Model-DAL-BLL）设计模式。提供课程浏览、购买、收藏、评分、评论等核心功能，面向在线 IT 技能学习场景。
 
-> ⚠️ **运行前请务必阅读 [如何使用](#🚀 如何使用) 和 [配置数据库](##3. ⭐ 配置数据库（关键步骤）)！**
+> ⚠️ **运行前请务必阅读 [#如何使用](#-如何使用) 和 [配置数据库](#3--配置数据库关键步骤)！**
 
 # 🧱 技术栈
 
-| 分类 | 技术 |
-|------|------|
-| 框架 | ASP.NET Web Forms（.NET Framework 4.0+） |
-| 语言 | C# |
-| 数据库 | SQL Server |
-| 架构 | 三层架构（Model / DAL / BLL / DBUtility / Web） |
-| 开发工具 | Visual Studio 2013+ |
-| 部署 | IIS 7.0+ |
+| 分类     | 技术                                            |
+| -------- | ----------------------------------------------- |
+| 框架     | ASP.NET Web Forms（.NET Framework 4.0+）        |
+| 语言     | C#                                              |
+| 数据库   | SQL Server                                      |
+| 架构     | 三层架构（Model / DAL / BLL / DBUtility / Web） |
+| 开发工具 | Visual Studio 2013+                             |
+| 部署     | IIS 7.0+                                        |
 
 # 👥 角色与功能
 
-| 角色 | 核心功能 |
-|------|----------|
+| 角色         | 核心功能                                             |
+| ------------ | ---------------------------------------------------- |
 | **普通用户** | 浏览课程、搜索筛选、加入购物车、收藏、购买、评分评论 |
-| **VIP 用户** | 享有普通用户所有权限 + VIP 专属权益 |
-| **管理员** | 用户管理、课程管理、分类管理、订单管理 |
+| **VIP 用户** | 享有普通用户所有权限 + VIP 专属权益                  |
+| **管理员**   | 用户管理、课程管理、分类管理、订单管理               |
 
 # 🗂️ 项目结构
 
@@ -53,12 +53,12 @@ ZhiZhou-Academy/
 
 ## 1. 环境要求
 
-| 依赖 | 版本要求 |
-|:-----|:---------|
-| Windows | 7+ / Server 2008+ |
-| Visual Studio | 2013+ |
-| SQL Server | 2008+ |
-| IIS | 7.0+（部署用） |
+| 依赖          | 版本要求          |
+| :------------ | :---------------- |
+| Windows       | 7+ / Server 2008+ |
+| Visual Studio | 2013+             |
+| SQL Server    | 2008+             |
+| IIS           | 7.0+（部署用）    |
 
 ## 2. 获取源码
 
@@ -99,11 +99,11 @@ git clone https://github.com/yiyinideshang/ZhiZhou-Academy.git
 
 # 👨‍💻 开发团队
 
-| 成员 | 角色 |
-|------|------|
+| 成员     | 角色        |
+| -------- | ----------- |
 | zhang/Me | Team Member |
-| wang | Team Member |
-| jin | Team Member |
+| wang     | Team Member |
+| jin      | Team Member |
 
 # 📄 说明
 
@@ -115,3 +115,4 @@ git clone https://github.com/yiyinideshang/ZhiZhou-Academy.git
 <div align="center">
   <sub>Built with ❤️ for ZhiZhou Academy</sub>
 </div>
+
